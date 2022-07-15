@@ -38,9 +38,14 @@ export default {
 
 <style lang="scss" scoped>
 header {
-    background-color: black;
+    background-color: transparent;
     padding: 2.5rem 0;
-
+    z-index: 99;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    
     .ms_container {
         display: flex;
         justify-content: space-between;
