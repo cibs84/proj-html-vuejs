@@ -37,6 +37,8 @@ export default {
 
 
 <style lang="scss" scoped>
+@import '../assets/styles/variables.scss';
+
 header {
     background-color: transparent;
     padding: 2.5rem 0;
@@ -59,7 +61,7 @@ header {
                 justify-content: space-between;
 
                 li {
-                    color: #c0c0c0;
+                    color: $ms_silver;
                     font-weight: 600;
 
                     a:hover {

@@ -1,10 +1,10 @@
 // FONTS
-@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
 
 // LIBRARIES AND VARIABLES
-@import 'bootstrap/scss/bootstrap.scss';
+// @import 'bootstrap/scss/bootstrap.scss';
 @import "@fortawesome/fontawesome-free/css/all.css";
 @import './variables.scss';
 
@@ -48,6 +48,211 @@ h6, button, .main-menu, .price {
 
 // COMMONS
 .ms_container {
-    width: 85%;
+    width: 90%;
     margin: 0 auto;
 }
+.ms_secondary_container {
+    width: 73%;
+    margin: 0 auto;
+}
+.ms_overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+}
+
+
+// Heading Section
+.heading-section {
+    
+    .title {
+        font-family: 'Lora', Arial, Helvetica, sans-serif;
+        font-size: 3rem;
+        font-weight: 400;
+        margin-bottom: 2rem;
+        font-style: italic;
+        text-align: center;
+    }
+    .line-separator {
+        width: 4rem;
+        height: 1px;
+        background-color: #bcbcbc;
+        margin: 0 auto 4.5rem;
+    }
+}
+
+// Section-A
+.section-A {
+    display: flex;
+    justify-content: space-between;
+
+    .ms_col {
+        height: 53rem;
+    }
+    .ms_col.text {
+        width: 40%;
+        background-color: $ms_black;
+        padding: 0 5%;
+        color: white;
+        display: flex;
+        align-items: center;
+    }
+    .ms_col.image {
+        width: 60%;
+
+        img {
+            width: 100%;
+            object-fit: cover;
+            object-position: top;
+            height: 100%;
+        }
+    }
+}
+// Section-B
+.section-B {
+    
+    .ms_secondary_container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .ms_col {
+            height: 53rem;
+        }
+        .ms_col.text {
+            background-color: $ms_black;
+            padding: 0 5%;
+            color: white;
+            display: flex;
+            align-items: center;
+        }
+        .ms_col.image {
+            background-color: lightcoral;
+            flex-shrink: 0;
+    
+            img {
+                width: 100%;
+                object-fit: cover;
+                object-position: top;
+                height: 100%;
+            }
+        }
+    }
+}
+
+// Card-a
+.card-a {
+    color: $ms_silver;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: 'Work Sans', Arial, Helvetica, sans-serif;
+    text-align: left;
+    display: flex;
+
+    .line-separator {
+        width: 3.5rem;
+        height: 1px;
+        background-color: #bcbcbc;
+        margin-right: 3rem;
+        margin-top: 0.75rem;
+        flex-shrink: 0;
+    }
+    .content {
+
+        .above-title {
+            letter-spacing: 0.1rem;
+            margin-bottom: 2.5rem;
+        }
+        .title {
+            font-family: 'Bebas Neue', Arial, Helvetica, sans-serif;
+            font-size: 4.5rem;
+            font-weight: 400;
+            line-height: 5.5rem; 
+            margin-bottom: 2.5rem;
+            color: white;
+        }
+        p {
+            font-size: 1.2rem;
+            line-height: 2rem;
+            text-transform: initial;
+            font-family: 'Lora', Arial, Helvetica, sans-serif;
+            font-weight: 400;
+            margin-bottom: 5rem;
+        }
+        a {
+           border: 1px solid $ms_silver;
+           padding: 1rem 2.5rem;
+           transition: 0.3s; 
+        }
+        a:hover {
+           color: $ms_black;
+           background-color: white;
+        }
+    }
+}
+
+// Card-b
+.card-b {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: 'Work Sans', Arial, Helvetica, sans-serif;
+    text-align: left;
+    display: flex;
+    z-index: 1;
+
+    .line-separator {
+        width: 3.5rem;
+        height: 1px;
+        background-color: #bcbcbc;
+        margin-right: 3rem;
+        margin-bottom: 2.5rem;
+        flex-shrink: 0;
+    }
+
+    .above-title {
+        letter-spacing: 0.1rem;
+        margin-bottom: 1.5rem;
+    }
+    .title {
+        font-family: 'Bebas Neue', Arial, Helvetica, sans-serif;
+        font-size: 3.5rem;
+        font-weight: 400;
+        line-height: 5.5rem; 
+        margin-bottom: 1.5rem;
+    }
+    .stars {
+        margin-bottom: 3.5rem;
+
+        span {
+            margin-right: 0.5rem;
+        }
+    }
+    p {
+        font-size: 1.2rem;
+        line-height: 2rem;
+        text-transform: initial;
+        font-family: 'Lora', Arial, Helvetica, sans-serif;
+        font-weight: 400;
+        margin-bottom: 1.2rem;
+    }
+    p:last-of-type {
+        margin-bottom: 3rem;
+    }
+    a {
+        border: 1px solid white;
+        padding: 0.8rem 1.7rem;
+        transition: 0.3s;
+        font-size: 0.8rem;
+        letter-spacing: 0.1rem;
+
+        &:hover {
+            color: black;
+            background-color: white;
+        }
+    }
+}
+
