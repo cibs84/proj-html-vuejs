@@ -1,5 +1,5 @@
 <template>
-    <section class="banner">
+    <section class="photo-banner">
         <img src="../assets/img/page52x.jpg" alt="Kung Pao Chicken">
         <h6 class="price">Kung pao chicken - $32</h6>
     </section>
@@ -16,7 +16,7 @@ export default {
 <style lang="scss" scoped>
 @import '../assets/styles/variables.scss';
 
-.banner {
+.photo-banner {
     position: relative;
 
     img {
@@ -26,7 +26,6 @@ export default {
         font-weight: 400;
     }
     .price {
-        font-size: 0.8rem;
         color: white;
         text-transform: uppercase;
         text-align: center;

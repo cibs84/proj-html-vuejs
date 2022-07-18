@@ -6,6 +6,7 @@
         <SectionReviews/>
         <SectionPhotoBanner/>
         <SectionTakeout/>
+        <SectionDishBanner/>
     </main>
 </template>
 
@@ -17,6 +18,7 @@ import SectionTakeout from "./SectionTakeout.vue";
 import SectionCorporateMessage from "./SectionCorporateMessage.vue";
 import SectionReviews from "./SectionReviews.vue";
 import SectionPhotoBanner from "./SectionPhotoBanner.vue";
+import SectionDishBanner from "./SectionDishBanner.vue";
 
 export default {
     name: 'MainComponent',
@@ -26,7 +28,8 @@ export default {
         SectionBestTable,
         SectionReviews,
         SectionTakeout,
-        SectionPhotoBanner
+        SectionPhotoBanner,
+        SectionDishBanner,
     }
 }
 </script>

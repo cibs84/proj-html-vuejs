@@ -108,11 +108,11 @@ export default {
         padding: 8rem 0;
     
     .ms_secondary_container {
-        row-gap: 3rem;
+        row-gap: 3.5rem;
 
         .ms_col {
             max-width: 50%;
-            width: calc(50% - 1.5rem);
+            width: calc(50% - 1.75rem);
         }
         .ms_col.bg-img {
             background-size: cover;
