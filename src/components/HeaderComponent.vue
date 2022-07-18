@@ -10,13 +10,11 @@
             <!-- Main Menu -->
             <nav class="main-menu">
                 <ul>
-                    <li><a href="#">My Link</a></li>
-                    <li><a href="#">My Link</a></li>
-                    <li><a href="#">My Link</a></li>
-                    <li><a href="#">My Link</a></li>
-                    <li><a href="#">My Link</a></li>
-                    <li><a href="#">My Link</a></li>
-                    <li><a href="#">My Link</a></li>
+                    <!-- Dynamic link generation -->
+                    <li v-for="(singleLink, index) in linksArray" :key="index">
+                        <a :href="singleLink.url">{{singleLink.title}}</a>
+                        <span v-if="singleLink.label !== null" :class="singleLink.label" class="label">{{singleLink.label}}</span>
+                    </li>
 
                     <!-- Cart Icon -->
                     <li class="icon-cart">
@@ -31,7 +29,10 @@
 
 <script>
 export default {
-    name: 'HeaderComponent'
+    name: 'HeaderComponent',
+    props: {
+        linksArray: Array
+    }
 }
 </script>
 
@@ -66,6 +67,12 @@ header {
 
                     a:hover {
                         color: white;
+                    }
+                    .label {
+                        font-size: 0.7rem;
+                        border: 1px solid rgba(188, 188, 188, 0.4);
+                        padding: 0.1rem 0.3rem;
+                        margin-left: 0.5rem;
                     }
                 }
             }

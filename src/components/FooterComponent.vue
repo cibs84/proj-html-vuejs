@@ -5,33 +5,15 @@
             <div class="overlay"></div>
             <!-- Content -->
             <div class="content">
-                <img src="../assets/img/logo-restaurant-2x-300x58.png" alt="Avada Logo" class="logo">
+                <img class="logo" src="../assets/img/logo-restaurant-2x-300x58.png" alt="Avada Logo">
                 <p>Phasellus molestie pellentesque mi quis lobortis. Mauris convallis quam tincidunt nunc interdum, porttitor lacinia nibh.</p>
+                
                 <!-- Social Links -->
                 <ul class="social-links">
-                    <li>
-                        <a href="#">
-                            <span><i class="fa-brands fa-circle fa-facebook-f"></i></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span><i class="fa-brands fa-circle fa-twitter"></i></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span><i class="fa-brands fa-circle fa-youtube"></i></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span><i class="fa-brands fa-circle fa-instagram"></i></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span><i class="fa-brands fa-circle fa-linkedin-in"></i></span>
+                    <!-- Dynamic social link generation -->
+                    <li v-for="(singleSocial, index) in socialsArray" :key="index">
+                        <a :href="singleSocial.url">
+                            <span><i class="fa-brands fa-circle " :class="singleSocial.class"></i></span>
                         </a>
                     </li>
                 </ul>
@@ -48,7 +30,10 @@
 
 <script>
 export default {
-    name: 'FooterComponent'
+    name: 'FooterComponent',
+    props: {
+        socialsArray: Array
+    }
 }
 </script>
 
