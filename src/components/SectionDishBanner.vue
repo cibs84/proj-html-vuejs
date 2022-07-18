@@ -43,6 +43,7 @@ export default {
             .card-b {
             flex-direction: column;
             align-items: flex-start;
+            position: relative;
     
                 .title {
                     margin-bottom: 3.5rem;
