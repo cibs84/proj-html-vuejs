@@ -1,5 +1,11 @@
 <template>
     <section class="news-promotions section-C">
+         <!-- Heading Section -->
+        <div class="heading-section">
+            <h2 class="title">Latest news & promotions</h2>
+            <div class="line-separator"></div>
+        </div>
+
         <div class="ms_secondary_container">
             <!-- Column -->
             <div class="ms_col">
