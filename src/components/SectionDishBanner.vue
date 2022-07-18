@@ -1,8 +1,8 @@
 <template>
     <section class="dish-banner">
         <div class="ms_secondary_container">
-            <!-- Card Container -->
-            <div class="card-container">
+            <!-- Column -->
+            <div class="ms_col">
                 <!-- Card-b -->
                 <div class="card-b">
                     <h3 class="title">Braised Abalone</h3>
@@ -35,13 +35,12 @@ export default {
 
     .ms_secondary_container {
 
-        .card-container {
+        .ms_col {
             width: 40%;
             background-color: $ms_black;
             padding: 5rem;
     
             .card-b {
-            position: relative;
             flex-direction: column;
             align-items: flex-start;
     

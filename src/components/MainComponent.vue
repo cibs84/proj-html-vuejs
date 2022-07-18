@@ -2,10 +2,13 @@
     <main>
         <SectionJumbotron/>
         <SectionCorporateMessage/>
+        <SectionFeatures/>
         <SectionBestTable/>
         <SectionReviews/>
         <SectionPhotoBanner/>
+        <SectionNewsPromotion/>
         <SectionTakeout/>
+        <SectionMenu/>
         <SectionDishBanner/>
     </main>
 </template>
@@ -19,6 +22,9 @@ import SectionCorporateMessage from "./SectionCorporateMessage.vue";
 import SectionReviews from "./SectionReviews.vue";
 import SectionPhotoBanner from "./SectionPhotoBanner.vue";
 import SectionDishBanner from "./SectionDishBanner.vue";
+import SectionMenu from "./SectionMenu.vue";
+import SectionFeatures from "./SectionFeatures.vue";
+import SectionNewsPromotion from "./SectionNewsPromotion.vue";
 
 export default {
     name: 'MainComponent',
@@ -30,6 +36,9 @@ export default {
         SectionTakeout,
         SectionPhotoBanner,
         SectionDishBanner,
+        SectionMenu,
+        SectionFeatures,
+        SectionNewsPromotion
     }
 }
 </script>

@@ -62,10 +62,6 @@ export default {
         order: 2;
     
         .ms_overlay {
-            position: absolute;
-            top: 0;
-            right: 0;
-            left: 0;
             height: 50%;
             background: linear-gradient(rgba(0, 0, 0, 0.9), #0000);
         }

@@ -2,7 +2,10 @@
   <div id="app">
       <!-- Transfer linksArray to HeaderComponent for generating dynamic links -->
       <HeaderComponent :linksArray="headerLinks"/>
+      
       <MainComponent />
+
+      <!-- Transfer socialsArray to FooterComponent for generating dynamic links -->
       <FooterComponent :socialsArray="footerSocialLinks"/>
   </div>
 </template>

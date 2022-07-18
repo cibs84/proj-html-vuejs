@@ -2,7 +2,7 @@
     <footer>
         <!-- Footer Top -->
         <div class="footer-top">
-            <div class="overlay"></div>
+            <div class="ms_overlay"></div>
             <!-- Content -->
             <div class="content">
                 <img class="logo" src="../assets/img/logo-restaurant-2x-300x58.png" alt="Avada Logo">
@@ -53,9 +53,15 @@ footer {
         height: 40rem;
         position: relative;
 
+        .ms_overlay {
+            height: 50%;
+            background: linear-gradient(rgba(0, 0, 0, 0.9), #0000);
+        }
+
         .content {
             width: 30%;
             text-align: center;
+            z-index: 100;
 
             .logo {
             width: 19rem;

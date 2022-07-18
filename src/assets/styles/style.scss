@@ -143,6 +143,22 @@ h6, button, .main-menu, .price {
     }
 }
 
+// Section-C
+.section-C {
+
+
+    .ms_secondary_container {
+        display: flex;
+        justify-content: space-between;
+
+        .ms_col {
+            width: calc((100% / 3) - 1.5rem);
+            
+            
+        }
+    }
+}
+
 // Card-a
 .card-a {
     color: $ms_silver;
