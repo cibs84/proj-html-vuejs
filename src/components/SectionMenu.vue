@@ -120,7 +120,6 @@ export default {
                     font-size: 2.8rem;
                     font-weight: 500;
                 }
-
                 .list {
 
                    .item-list {
@@ -137,7 +136,6 @@ export default {
                             font-size: 2rem;
                             font-weight: 500;
                             font-family: 'Bebas Neue', Arial, Helvetica, sans-serif;
-
                             }
                             .price {
                                 text-transform: uppercase;
@@ -145,13 +143,12 @@ export default {
                                 letter-spacing: 0.1rem;
                                 font-weight: 600;
                             }
-                            .description {
-                                line-height: 2rem;
-                                font-size: 1.2rem;
-                                margin-top: 0.5rem;
-                            }
                         }
-                        
+                        .description {
+                            line-height: 2rem;
+                            font-size: 1.2rem;
+                            margin-top: 0.5rem;
+                        }
                    } 
                 }
             }
