@@ -53,7 +53,7 @@
                     <!-- List -->
                     <ul class="list">
                         <!-- Item List -->
-                        <li class="item-list" v-for="(iteration, index) in 4" :key="index">
+                        <li class="item-list" v-for="(item, index) in 4" :key="index">
                             <div class="item-heading">
                                 <h4 class="dish">{{menuDesserts[index].dish}}</h4>
                                 <span class="price">${{menuDesserts[index].price}}</span>
@@ -75,7 +75,7 @@ export default {
         dataMenu: Array
     },
     computed: {
-        // dataMenu filtered by course property
+        // dataMenu filtered by 'course' property
         menuAppetizer(){
             return this.dataMenu.filter(element => {
                 return element.course === 'HORS D’OEUVRES'
@@ -160,6 +160,9 @@ export default {
             background-size: cover;
             background-position: bottom;
 
+            .ms_overlay {
+                background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+            }
             .ms_card {
                 position: relative;
                 color: white;
