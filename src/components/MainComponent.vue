@@ -10,6 +10,9 @@
         <SectionTakeout/>
         <SectionMenu/>
         <SectionDishBanner/>
+
+        <FixedButtons/>
+
     </main>
 </template>
 
@@ -25,6 +28,7 @@ import SectionDishBanner from "./SectionDishBanner.vue";
 import SectionMenu from "./SectionMenu.vue";
 import SectionFeatures from "./SectionFeatures.vue";
 import SectionNewsPromotion from "./SectionNewsPromotion.vue";
+import FixedButtons from "./FixedButtons.vue";
 
 export default {
     name: 'MainComponent',
@@ -38,7 +42,8 @@ export default {
         SectionDishBanner,
         SectionMenu,
         SectionFeatures,
-        SectionNewsPromotion
+        SectionNewsPromotion,
+        FixedButtons
     }
 }
 </script>
