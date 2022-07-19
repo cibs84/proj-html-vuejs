@@ -8,7 +8,7 @@
         <SectionPhotoBanner/>
         <SectionNewsPromotion/>
         <SectionTakeout/>
-        <SectionMenu/>
+        <SectionMenu :dataMenu="dataMenu"/>
         <SectionDishBanner/>
 
         <FixedButtons/>
@@ -44,6 +44,9 @@ export default {
         SectionFeatures,
         SectionNewsPromotion,
         FixedButtons
+    },
+    props: {
+        dataMenu: Array
     }
 }
 </script>

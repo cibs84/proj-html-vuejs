@@ -7,31 +7,16 @@
                 <!-- Card -->
                 <div class="ms_card">
                     <h3 class="title">HORS D’OEUVRES</h3>
+
                     <!-- List -->
                     <ul class="list">
                         <!-- Item List -->
-                        <li class="item-list">
-                            <h4 class="dish">Ahi salmon Nigiri</h4>
-                            <span class="price">$48</span>
-                            <p class="description">Eget vulputate vitae quis rutrum blandit sed. Quam nulla sit lacinia.</p>
-                        </li>
-                        <!-- Item List -->
-                        <li class="item-list">
-                            <h4 class="dish">Ahi salmon Nigiri</h4>
-                            <span class="price">$48</span>
-                            <p class="description">Eget vulputate vitae quis rutrum blandit sed. Quam nulla sit lacinia.</p>
-                        </li>
-                        <!-- Item List -->
-                        <li class="item-list">
-                            <h4 class="dish">Ahi salmon Nigiri</h4>
-                            <span class="price">$48</span>
-                            <p class="description">Eget vulputate vitae quis rutrum blandit sed. Quam nulla sit lacinia.</p>
-                        </li>
-                        <!-- Item List -->
-                        <li class="item-list">
-                            <h4 class="dish">Ahi salmon Nigiri</h4>
-                            <span class="price">$48</span>
-                            <p class="description">Eget vulputate vitae quis rutrum blandit sed. Quam nulla sit lacinia.</p>
+                        <li class="item-list" v-for="(iteration, index) in 4" :key="index">
+                            <div class="item-heading">
+                                <h4 class="dish">{{menuAppetizer[index].dish}}</h4>
+                                <span class="price">${{menuAppetizer[index].price}}</span>
+                            </div>
+                            <p class="description">{{menuAppetizer[index].description}}</p>
                         </li>
                     </ul>
                 </div>
@@ -47,28 +32,12 @@
                     <!-- List -->
                     <ul class="list">
                         <!-- Item List -->
-                        <li class="item-list">
-                            <h4 class="dish">Ahi salmon Nigiri</h4>
-                            <span class="price">$48</span>
-                            <p class="description">Eget vulputate vitae quis rutrum blandit sed. Quam nulla sit lacinia.</p>
-                        </li>
-                        <!-- Item List -->
-                        <li class="item-list">
-                            <h4 class="dish">Ahi salmon Nigiri</h4>
-                            <span class="price">$48</span>
-                            <p class="description">Eget vulputate vitae quis rutrum blandit sed. Quam nulla sit lacinia.</p>
-                        </li>
-                        <!-- Item List -->
-                        <li class="item-list">
-                            <h4 class="dish">Ahi salmon Nigiri</h4>
-                            <span class="price">$48</span>
-                            <p class="description">Eget vulputate vitae quis rutrum blandit sed. Quam nulla sit lacinia.</p>
-                        </li>
-                        <!-- Item List -->
-                        <li class="item-list">
-                            <h4 class="dish">Ahi salmon Nigiri</h4>
-                            <span class="price">$48</span>
-                            <p class="description">Eget vulputate vitae quis rutrum blandit sed. Quam nulla sit lacinia.</p>
+                        <li class="item-list" v-for="(iteration, index) in 4" :key="index">
+                            <div class="item-heading">
+                                <h4 class="dish">{{menuMainCourse[index].dish}}</h4>
+                                <span class="price">${{menuMainCourse[index].price}}</span>
+                            </div>
+                            <p class="description">{{menuMainCourse[index].description}}</p>
                         </li>
                     </ul>
                 </div>
@@ -80,31 +49,16 @@
                  <!-- Card -->
                 <div class="ms_card">
                     <h3 class="title">DESSERTS</h3>
+
                     <!-- List -->
                     <ul class="list">
                         <!-- Item List -->
-                        <li class="item-list">
-                            <h4 class="dish">Ahi salmon Nigiri</h4>
-                            <span class="price">$48</span>
-                            <p class="description">Eget vulputate vitae quis rutrum blandit sed. Quam nulla sit lacinia.</p>
-                        </li>
-                        <!-- Item List -->
-                        <li class="item-list">
-                            <h4 class="dish">Ahi salmon Nigiri</h4>
-                            <span class="price">$48</span>
-                            <p class="description">Eget vulputate vitae quis rutrum blandit sed. Quam nulla sit lacinia.</p>
-                        </li>
-                        <!-- Item List -->
-                        <li class="item-list">
-                            <h4 class="dish">Ahi salmon Nigiri</h4>
-                            <span class="price">$48</span>
-                            <p class="description">Eget vulputate vitae quis rutrum blandit sed. Quam nulla sit lacinia.</p>
-                        </li>
-                        <!-- Item List -->
-                        <li class="item-list">
-                            <h4 class="dish">Ahi salmon Nigiri</h4>
-                            <span class="price">$48</span>
-                            <p class="description">Eget vulputate vitae quis rutrum blandit sed. Quam nulla sit lacinia.</p>
+                        <li class="item-list" v-for="(iteration, index) in 4" :key="index">
+                            <div class="item-heading">
+                                <h4 class="dish">{{menuDesserts[index].dish}}</h4>
+                                <span class="price">${{menuDesserts[index].price}}</span>
+                            </div>
+                            <p class="description">{{menuDesserts[index].description}}</p>
                         </li>
                     </ul>
                 </div>
@@ -116,7 +70,28 @@
 
 <script>
 export default {
-    name: 'SectionMenu'
+    name: 'SectionMenu',
+    props: {
+        dataMenu: Array
+    },
+    computed: {
+        // dataMenu filtered by course property
+        menuAppetizer(){
+            return this.dataMenu.filter(element => {
+                return element.course === 'HORS D’OEUVRES'
+            });
+        },
+        menuMainCourse(){
+            return this.dataMenu.filter(element => {
+                return element.course === 'MAIN COURSE'
+            });
+        },
+        menuDesserts(){
+            return this.dataMenu.filter(element => {
+                return element.course === 'DESSERTS'
+            });
+        }
+    }
 }
 </script>
 
@@ -150,26 +125,33 @@ export default {
 
                    .item-list {
                         margin-bottom: 2.5rem;
-                    
-                        .dish {
+
+                        .item-heading {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: baseline;
+                            
+                            .dish {
                             display: inline-block;
                             text-transform: uppercase;
-                            margin-right: 9rem;
                             font-size: 2rem;
                             font-weight: 500;
                             font-family: 'Bebas Neue', Arial, Helvetica, sans-serif;
+
+                            }
+                            .price {
+                                text-transform: uppercase;
+                                font-size: 1rem;
+                                letter-spacing: 0.1rem;
+                                font-weight: 600;
+                            }
+                            .description {
+                                line-height: 2rem;
+                                font-size: 1.2rem;
+                                margin-top: 0.5rem;
+                            }
                         }
-                        .price {
-                            text-transform: uppercase;
-                            font-size: 1rem;
-                            letter-spacing: 0.1rem;
-                            font-weight: 600;
-                        }
-                        .description {
-                            line-height: 2rem;
-                            font-size: 1.2rem;
-                            margin-top: 0.5rem;
-                        }
+                        
                    } 
                 }
             }

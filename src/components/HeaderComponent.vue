@@ -55,15 +55,15 @@ header {
         align-items: center;
 
         .main-menu {
-            width: 50%;
+            max-width: 80%;
 
             ul {
-                display: flex;
-                justify-content: space-between;
 
                 li {
                     color: $ms_silver;
                     font-weight: 600;
+                    display: inline-block;
+                    margin-left: 3rem;
 
                     a:hover {
                         color: white;
