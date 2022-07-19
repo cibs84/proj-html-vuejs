@@ -95,7 +95,7 @@ footer {
                     transition: 0.3s;
 
                     &:hover {
-                        background-color: $ms_silver;
+                        background-color: #7e6016;
                         color: white;
                     }
                 }

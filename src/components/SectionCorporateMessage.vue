@@ -19,7 +19,7 @@
             <!-- Col Image -->
             <div class="ms_col image">
                 <img src="../assets/img/info22x.jpg" alt="">
-                <div class="overlay"></div>
+                <h6 class="price">California Rolls - $22</h6>
             </div>
         </div>
     </section>
@@ -72,6 +72,19 @@ export default {
     .ms_col.image {
         width: 47%;
         flex-shrink: 0;
+        position: relative;
+
+        .price {
+        color: white;
+        text-transform: uppercase;
+        text-align: center;
+        position: absolute;
+        bottom: 3rem;
+        left: 50%;
+        transform: translate(-50%);
+        font-size: 1rem;
+        letter-spacing: 0.1rem;
+        }
     }
 }
 </style>

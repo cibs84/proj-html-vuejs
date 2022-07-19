@@ -4,7 +4,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
 
 // LIBRARIES AND VARIABLES
-// @import 'bootstrap/scss/bootstrap.scss';
 @import "@fortawesome/fontawesome-free/css/all.css";
 @import './variables.scss';
 
@@ -127,6 +126,17 @@ h6, button, .main-menu, .price {
 
         .ms_col {
             height: 53rem;
+            
+            &:nth-child(2) {
+                transform: scale(1);
+                transition: all 0.6s;
+                cursor: pointer;
+                
+                &:hover {
+                    transform: scale(1.03);
+                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                }
+            }
         }
         .ms_col.text {
             background-color: $ms_black;
@@ -134,6 +144,9 @@ h6, button, .main-menu, .price {
             color: white;
             display: flex;
             align-items: center;
+
+            &:hover {
+            }
         }
         .ms_col.image {
             background-color: lightcoral;
