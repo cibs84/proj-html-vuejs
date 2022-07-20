@@ -3,14 +3,15 @@
         <div class="ms_secondary_container">
             <!-- Column -->
             <div class="ms_col">
-                <!-- Card-b -->
+                <!-- Card-b - A random dish from the dataMenu array -->
                 <div class="card-b">
-                    <h3 class="title">Braised Abalone</h3>
-                    <div class="price">$52</div>
+                    <!-- Dish, Price and Description -->
+                    <h3 class="dish">{{this.randomDish.dish}}</h3>
+                    <div class="price">${{this.randomDish.price}}</div>
                     <div class="line-separator"></div>
-                    <p>Pellentesque vitae viverra risus, sagittis. Venenatis ridiculus scelerisque nisi in urna nulla. Sit tempor a et nisl, ac felis.</p>
+                    <p>{{this.randomDish.description}}</p>
                     <!-- Button -->
-                    <a href="#">View in the menu</a>
+                    <a :href="randomDish.url">View in the menu</a>
                 </div>
             </div>
         </div>
@@ -20,7 +21,23 @@
 
 <script>
 export default {
-    name: 'SectionPhotoBanner'
+    name: 'SectionPhotoBanner',
+    props: {
+        dataMenu: Array
+    },
+    methods: {
+        // Returns a random number between min and max (both included)
+        getRndInteger(min, max) {
+            return Math.floor(Math.random() * (max - min + 1) ) + min;
+        }
+    },
+    computed: {
+        // Returns a random item from dataMenu array
+        randomDish(){
+            const rndIndex = this.getRndInteger(0, this.dataMenu.length-1);
+            return this.dataMenu[rndIndex]
+        }
+    }
 }
 </script>
 
@@ -44,11 +61,14 @@ export default {
             flex-direction: column;
             align-items: flex-start;
             position: relative;
-    
-                .title {
+                    
+                .dish {
+                    display: inline-block;
+                    max-width: 87%;
                     margin-bottom: 3.5rem;
-                    width: 30%;
                     font-size: 4.5rem;
+                    font-weight: 400;
+                
                 }
                 .price {
                     position: absolute;

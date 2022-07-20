@@ -1,7 +1,7 @@
 <template>
     <section class="photo-banner">
         <img src="../assets/img/page52x.jpg" alt="Kung Pao Chicken">
-        <h6 class="price">Kung pao chicken - $32</h6>
+        <h6 class="price"><a href="#">Kung pao chicken - $32</a></h6>
     </section>
 </template>
 
@@ -30,7 +30,7 @@ export default {
         text-transform: uppercase;
         text-align: center;
         position: absolute;
-        bottom: 3rem;
+        bottom: 1.5rem;
         left: 50%;
         transform: translate(-50%);
         font-size: 1rem;

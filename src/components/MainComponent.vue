@@ -9,7 +9,7 @@
         <SectionNewsPromotion/>
         <SectionTakeout/>
         <SectionMenu :dataMenu="dataMenu"/>
-        <SectionDishBanner/>
+        <SectionDishBanner :dataMenu="dataMenu"/>
 
         <FixedButtons/>
 
