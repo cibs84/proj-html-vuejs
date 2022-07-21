@@ -13,7 +13,7 @@
                 <div class="ms_card">
                     <img src="../assets/img/blog92x-600x687.jpg" alt="">
                     <div class="text-area">
-                        <h3 class="title">Braised Abalone</h3>
+                        <h3 class="title">The best coffee in town</h3>
                         <div class="meta-data">
                             By <a href="#">admin</a> | January 7th, 2020 | Categories: <a href="#">News</a>
                         </div>
@@ -28,13 +28,14 @@
                     <div class="hiding-element"></div>
                 </div>
             </div>
+
             <!-- Column -->
             <div class="ms_col">
                 <!-- Card -->
                 <div class="ms_card">
                     <img src="../assets/img/blog72x-600x687.jpg" alt="">
                     <div class="text-area">
-                        <h3 class="title">Braised Abalone</h3>
+                        <h3 class="title">Discover our new menu</h3>
                         <div class="meta-data">
                             By <a href="#">admin</a> | January 7th, 2020 | Categories: <a href="#">News</a>
                         </div>
@@ -43,19 +44,20 @@
                     <!-- Card Hover Items -->
                     <div class="ms_overlay">
                         <span class="link-icon"><i class="fa-solid fa-link"></i></span>
-                        <h3 class="title">The best coffee in town</h3>
+                        <h3 class="title">Discover our new menu</h3>
                         <div class="meta-data">News</div>
                     </div>
                     <div class="hiding-element"></div>
                 </div>
             </div>
+
             <!-- Column -->
             <div class="ms_col">
                 <!-- Card -->
                 <div class="ms_card">
                     <img src="../assets/img/blog82x-600x687.jpg" alt="">
                     <div class="text-area">
-                        <h3 class="title">Braised Abalone</h3>
+                        <h3 class="title">We now accept square!</h3>
                         <div class="meta-data">
                             By <a href="#">admin</a> | January 7th, 2020 | Categories: <a href="#">News</a>
                         </div>
@@ -64,7 +66,7 @@
                     <!-- Card Hover Items -->
                     <div class="ms_overlay">
                         <span class="link-icon"><i class="fa-solid fa-link"></i></span>
-                        <h3 class="title">The best coffee in town</h3>
+                        <h3 class="title">We now accept square!</h3>
                         <div class="meta-data">News</div>
                     </div>
                     <div class="hiding-element"></div>

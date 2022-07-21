@@ -15,6 +15,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+html {
+    scroll-behavior: smooth;
+}
 img {
     max-width: 100%;
 }
@@ -63,6 +66,7 @@ h6, button, .main-menu, .price {
     background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
 }
 
+  
 
 // Heading Section
 .heading-section {

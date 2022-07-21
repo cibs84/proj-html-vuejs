@@ -1,7 +1,7 @@
 <template>
     <div>
         <!-- Demos Button -->
-        <button class="demos-button btn">
+        <button class="demos-button btn" v-if="visibleButtons">
             <!-- Icon -->
             <span class="demos-icon">
                 <i class="fa-brands fa-buffer"></i>
@@ -13,7 +13,7 @@
 
 
         <!-- Sales Button -->
-        <button class="sales-button btn">
+        <button class="sales-button btn" v-if="visibleButtons">
             <!-- Price -->
             <div class="price">
                 <sup>$</sup>39
@@ -35,7 +35,10 @@
 
 <script>
 export default {
-    name: 'FixedButtons'
+    name: 'FixedButtons',
+    props: {
+        visibleButtons: Boolean
+    }
 }
 </script>
 
@@ -54,13 +57,17 @@ export default {
     position: fixed;
     z-index: 100;
 
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     cursor: pointer;
     background-color: #fff;
     border-radius: 6px;
     color: #6f7f8c;
     border-color: #00000047;
+    transition: 0.3s;
     
+    &:hover {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border-color: #393939;
+    }
     .text {
        font-size: 0.8rem;
        font-weight: 600;
@@ -97,6 +104,10 @@ export default {
     text-align: center;
     line-height: 2.4rem;
     color: white;
+
+    &:hover {
+        background-color: $ms_black;
+    }
 }
 </style>
 

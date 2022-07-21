@@ -13,7 +13,9 @@
                         <!-- Item List -->
                         <li class="item-list" v-for="(iteration, index) in 4" :key="index">
                             <div class="item-heading">
-                                <h4 class="dish">{{menuAppetizer[index].dish}}</h4>
+                                <h4 class="dish">
+                                    <a :href="menuAppetizer[index].url">{{menuAppetizer[index].dish}}</a>
+                                </h4>
                                 <span class="price">${{menuAppetizer[index].price}}</span>
                             </div>
                             <p class="description">{{menuAppetizer[index].description}}</p>
@@ -34,7 +36,9 @@
                         <!-- Item List -->
                         <li class="item-list" v-for="(iteration, index) in 4" :key="index">
                             <div class="item-heading">
-                                <h4 class="dish">{{menuMainCourse[index].dish}}</h4>
+                                <h4 class="dish">
+                                    <a :href="menuMainCourse[index].url">{{menuMainCourse[index].dish}}</a>
+                                </h4>
                                 <span class="price">${{menuMainCourse[index].price}}</span>
                             </div>
                             <p class="description">{{menuMainCourse[index].description}}</p>
@@ -55,7 +59,9 @@
                         <!-- Item List -->
                         <li class="item-list" v-for="(item, index) in 4" :key="index">
                             <div class="item-heading">
-                                <h4 class="dish">{{menuDesserts[index].dish}}</h4>
+                                <h4 class="dish">
+                                    <a :href="menuDesserts[index].url">{{menuDesserts[index].dish}}</a>
+                                </h4>
                                 <span class="price">${{menuDesserts[index].price}}</span>
                             </div>
                             <p class="description">{{menuDesserts[index].description}}</p>

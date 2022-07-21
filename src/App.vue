@@ -3,7 +3,7 @@
       <!-- Transfer linksArray to HeaderComponent for generating dynamic links -->
       <HeaderComponent :linksArray="headerLinks"/>
       
-      <MainComponent :dataMenu="dataMenu"/>
+      <MainComponent :dataMenu="dataMenu" :visibleButtons="visibleButtons"/>
 
       <!-- Transfer socialsArray to FooterComponent for generating dynamic links -->
       <FooterComponent :socialsArray="footerSocialLinks"/>
@@ -194,7 +194,8 @@ export default {
           description: 'Modi tempora sequi sed dignissimos, necessitatibus voluptates.',
           url: '#'
         }
-      ]
+      ],
+      visibleButtons: false
     }
   },
   mounted() {

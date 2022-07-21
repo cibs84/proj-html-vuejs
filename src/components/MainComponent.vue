@@ -11,7 +11,7 @@
         <SectionMenu :dataMenu="dataMenu"/>
         <SectionDishBanner :dataMenu="dataMenu"/>
 
-        <FixedButtons/>
+        <FixedButtons :visibleButtons="visibleButtons"/>
 
     </main>
 </template>
@@ -46,7 +46,8 @@ export default {
         FixedButtons
     },
     props: {
-        dataMenu: Array
+        dataMenu: Array,
+        visibleButtons: Boolean
     }
 }
 </script>
